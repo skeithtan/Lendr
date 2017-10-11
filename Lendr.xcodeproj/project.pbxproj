@@ -1,0 +1,567 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		53DE939D1F8EE4C000BD9C2E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DE939C1F8EE4C000BD9C2E /* AppDelegate.swift */; };
+		53DE939F1F8EE4C000BD9C2E /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DE939E1F8EE4C000BD9C2E /* FirstViewController.swift */; };
+		53DE93A11F8EE4C000BD9C2E /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DE93A01F8EE4C000BD9C2E /* SecondViewController.swift */; };
+		53DE93A41F8EE4C100BD9C2E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53DE93A21F8EE4C100BD9C2E /* Main.storyboard */; };
+		53DE93A61F8EE4C100BD9C2E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53DE93A51F8EE4C100BD9C2E /* Assets.xcassets */; };
+		53DE93A91F8EE4C100BD9C2E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53DE93A71F8EE4C100BD9C2E /* LaunchScreen.storyboard */; };
+		53DE93B41F8EE4C100BD9C2E /* LendrTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DE93B31F8EE4C100BD9C2E /* LendrTests.swift */; };
+		53DE93BF1F8EE4C100BD9C2E /* LendrUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DE93BE1F8EE4C100BD9C2E /* LendrUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		53DE93B01F8EE4C100BD9C2E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 53DE93911F8EE4C000BD9C2E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 53DE93981F8EE4C000BD9C2E;
+			remoteInfo = Lendr;
+		};
+		53DE93BB1F8EE4C100BD9C2E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 53DE93911F8EE4C000BD9C2E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 53DE93981F8EE4C000BD9C2E;
+			remoteInfo = Lendr;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		53DE93991F8EE4C000BD9C2E /* Lendr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lendr.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		53DE939C1F8EE4C000BD9C2E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		53DE939E1F8EE4C000BD9C2E /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		53DE93A01F8EE4C000BD9C2E /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		53DE93A31F8EE4C100BD9C2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		53DE93A51F8EE4C100BD9C2E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		53DE93A81F8EE4C100BD9C2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		53DE93AA1F8EE4C100BD9C2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		53DE93AF1F8EE4C100BD9C2E /* LendrTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LendrTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		53DE93B31F8EE4C100BD9C2E /* LendrTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LendrTests.swift; sourceTree = "<group>"; };
+		53DE93B51F8EE4C100BD9C2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		53DE93BA1F8EE4C100BD9C2E /* LendrUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LendrUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		53DE93BE1F8EE4C100BD9C2E /* LendrUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LendrUITests.swift; sourceTree = "<group>"; };
+		53DE93C01F8EE4C100BD9C2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		53DE93961F8EE4C000BD9C2E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		53DE93AC1F8EE4C100BD9C2E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		53DE93B71F8EE4C100BD9C2E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		53DE93901F8EE4C000BD9C2E = {
+			isa = PBXGroup;
+			children = (
+				53DE939B1F8EE4C000BD9C2E /* Lendr */,
+				53DE93B21F8EE4C100BD9C2E /* LendrTests */,
+				53DE93BD1F8EE4C100BD9C2E /* LendrUITests */,
+				53DE939A1F8EE4C000BD9C2E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		53DE939A1F8EE4C000BD9C2E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				53DE93991F8EE4C000BD9C2E /* Lendr.app */,
+				53DE93AF1F8EE4C100BD9C2E /* LendrTests.xctest */,
+				53DE93BA1F8EE4C100BD9C2E /* LendrUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		53DE939B1F8EE4C000BD9C2E /* Lendr */ = {
+			isa = PBXGroup;
+			children = (
+				53DE939C1F8EE4C000BD9C2E /* AppDelegate.swift */,
+				53DE939E1F8EE4C000BD9C2E /* FirstViewController.swift */,
+				53DE93A01F8EE4C000BD9C2E /* SecondViewController.swift */,
+				53DE93A21F8EE4C100BD9C2E /* Main.storyboard */,
+				53DE93A51F8EE4C100BD9C2E /* Assets.xcassets */,
+				53DE93A71F8EE4C100BD9C2E /* LaunchScreen.storyboard */,
+				53DE93AA1F8EE4C100BD9C2E /* Info.plist */,
+			);
+			path = Lendr;
+			sourceTree = "<group>";
+		};
+		53DE93B21F8EE4C100BD9C2E /* LendrTests */ = {
+			isa = PBXGroup;
+			children = (
+				53DE93B31F8EE4C100BD9C2E /* LendrTests.swift */,
+				53DE93B51F8EE4C100BD9C2E /* Info.plist */,
+			);
+			path = LendrTests;
+			sourceTree = "<group>";
+		};
+		53DE93BD1F8EE4C100BD9C2E /* LendrUITests */ = {
+			isa = PBXGroup;
+			children = (
+				53DE93BE1F8EE4C100BD9C2E /* LendrUITests.swift */,
+				53DE93C01F8EE4C100BD9C2E /* Info.plist */,
+			);
+			path = LendrUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		53DE93981F8EE4C000BD9C2E /* Lendr */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 53DE93C31F8EE4C100BD9C2E /* Build configuration list for PBXNativeTarget "Lendr" */;
+			buildPhases = (
+				53DE93951F8EE4C000BD9C2E /* Sources */,
+				53DE93961F8EE4C000BD9C2E /* Frameworks */,
+				53DE93971F8EE4C000BD9C2E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Lendr;
+			productName = Lendr;
+			productReference = 53DE93991F8EE4C000BD9C2E /* Lendr.app */;
+			productType = "com.apple.product-type.application";
+		};
+		53DE93AE1F8EE4C100BD9C2E /* LendrTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 53DE93C61F8EE4C100BD9C2E /* Build configuration list for PBXNativeTarget "LendrTests" */;
+			buildPhases = (
+				53DE93AB1F8EE4C100BD9C2E /* Sources */,
+				53DE93AC1F8EE4C100BD9C2E /* Frameworks */,
+				53DE93AD1F8EE4C100BD9C2E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				53DE93B11F8EE4C100BD9C2E /* PBXTargetDependency */,
+			);
+			name = LendrTests;
+			productName = LendrTests;
+			productReference = 53DE93AF1F8EE4C100BD9C2E /* LendrTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		53DE93B91F8EE4C100BD9C2E /* LendrUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 53DE93C91F8EE4C100BD9C2E /* Build configuration list for PBXNativeTarget "LendrUITests" */;
+			buildPhases = (
+				53DE93B61F8EE4C100BD9C2E /* Sources */,
+				53DE93B71F8EE4C100BD9C2E /* Frameworks */,
+				53DE93B81F8EE4C100BD9C2E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				53DE93BC1F8EE4C100BD9C2E /* PBXTargetDependency */,
+			);
+			name = LendrUITests;
+			productName = LendrUITests;
+			productReference = 53DE93BA1F8EE4C100BD9C2E /* LendrUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		53DE93911F8EE4C000BD9C2E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0900;
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = Axis;
+				TargetAttributes = {
+					53DE93981F8EE4C000BD9C2E = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+					};
+					53DE93AE1F8EE4C100BD9C2E = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 53DE93981F8EE4C000BD9C2E;
+					};
+					53DE93B91F8EE4C100BD9C2E = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 53DE93981F8EE4C000BD9C2E;
+					};
+				};
+			};
+			buildConfigurationList = 53DE93941F8EE4C000BD9C2E /* Build configuration list for PBXProject "Lendr" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 53DE93901F8EE4C000BD9C2E;
+			productRefGroup = 53DE939A1F8EE4C000BD9C2E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				53DE93981F8EE4C000BD9C2E /* Lendr */,
+				53DE93AE1F8EE4C100BD9C2E /* LendrTests */,
+				53DE93B91F8EE4C100BD9C2E /* LendrUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		53DE93971F8EE4C000BD9C2E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				53DE93A91F8EE4C100BD9C2E /* LaunchScreen.storyboard in Resources */,
+				53DE93A61F8EE4C100BD9C2E /* Assets.xcassets in Resources */,
+				53DE93A41F8EE4C100BD9C2E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		53DE93AD1F8EE4C100BD9C2E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		53DE93B81F8EE4C100BD9C2E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		53DE93951F8EE4C000BD9C2E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				53DE93A11F8EE4C000BD9C2E /* SecondViewController.swift in Sources */,
+				53DE939D1F8EE4C000BD9C2E /* AppDelegate.swift in Sources */,
+				53DE939F1F8EE4C000BD9C2E /* FirstViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		53DE93AB1F8EE4C100BD9C2E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				53DE93B41F8EE4C100BD9C2E /* LendrTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		53DE93B61F8EE4C100BD9C2E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				53DE93BF1F8EE4C100BD9C2E /* LendrUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		53DE93B11F8EE4C100BD9C2E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 53DE93981F8EE4C000BD9C2E /* Lendr */;
+			targetProxy = 53DE93B01F8EE4C100BD9C2E /* PBXContainerItemProxy */;
+		};
+		53DE93BC1F8EE4C100BD9C2E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 53DE93981F8EE4C000BD9C2E /* Lendr */;
+			targetProxy = 53DE93BB1F8EE4C100BD9C2E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		53DE93A21F8EE4C100BD9C2E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				53DE93A31F8EE4C100BD9C2E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		53DE93A71F8EE4C100BD9C2E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				53DE93A81F8EE4C100BD9C2E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		53DE93C11F8EE4C100BD9C2E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		53DE93C21F8EE4C100BD9C2E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		53DE93C41F8EE4C100BD9C2E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PJX39ST98L;
+				INFOPLIST_FILE = Lendr/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = axis.Lendr;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		53DE93C51F8EE4C100BD9C2E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PJX39ST98L;
+				INFOPLIST_FILE = Lendr/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = axis.Lendr;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		53DE93C71F8EE4C100BD9C2E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PJX39ST98L;
+				INFOPLIST_FILE = LendrTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = axis.LendrTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Lendr.app/Lendr";
+			};
+			name = Debug;
+		};
+		53DE93C81F8EE4C100BD9C2E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PJX39ST98L;
+				INFOPLIST_FILE = LendrTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = axis.LendrTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Lendr.app/Lendr";
+			};
+			name = Release;
+		};
+		53DE93CA1F8EE4C100BD9C2E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PJX39ST98L;
+				INFOPLIST_FILE = LendrUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = axis.LendrUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Lendr;
+			};
+			name = Debug;
+		};
+		53DE93CB1F8EE4C100BD9C2E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PJX39ST98L;
+				INFOPLIST_FILE = LendrUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = axis.LendrUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Lendr;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		53DE93941F8EE4C000BD9C2E /* Build configuration list for PBXProject "Lendr" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				53DE93C11F8EE4C100BD9C2E /* Debug */,
+				53DE93C21F8EE4C100BD9C2E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		53DE93C31F8EE4C100BD9C2E /* Build configuration list for PBXNativeTarget "Lendr" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				53DE93C41F8EE4C100BD9C2E /* Debug */,
+				53DE93C51F8EE4C100BD9C2E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		53DE93C61F8EE4C100BD9C2E /* Build configuration list for PBXNativeTarget "LendrTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				53DE93C71F8EE4C100BD9C2E /* Debug */,
+				53DE93C81F8EE4C100BD9C2E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		53DE93C91F8EE4C100BD9C2E /* Build configuration list for PBXNativeTarget "LendrUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				53DE93CA1F8EE4C100BD9C2E /* Debug */,
+				53DE93CB1F8EE4C100BD9C2E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 53DE93911F8EE4C000BD9C2E /* Project object */;
+}
