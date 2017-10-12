@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5307935B1F8EE9B00056CFBA /* LentItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5307935A1F8EE9B00056CFBA /* LentItemCell.swift */; };
 		53DE939D1F8EE4C000BD9C2E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DE939C1F8EE4C000BD9C2E /* AppDelegate.swift */; };
 		53DE939F1F8EE4C000BD9C2E /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DE939E1F8EE4C000BD9C2E /* FirstViewController.swift */; };
 		53DE93A11F8EE4C000BD9C2E /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DE93A01F8EE4C000BD9C2E /* SecondViewController.swift */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5307935A1F8EE9B00056CFBA /* LentItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LentItemCell.swift; sourceTree = "<group>"; };
 		53DE93991F8EE4C000BD9C2E /* Lendr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lendr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		53DE939C1F8EE4C000BD9C2E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		53DE939E1F8EE4C000BD9C2E /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -99,12 +101,11 @@
 		53DE939B1F8EE4C000BD9C2E /* Lendr */ = {
 			isa = PBXGroup;
 			children = (
-				53DE939C1F8EE4C000BD9C2E /* AppDelegate.swift */,
-				53DE939E1F8EE4C000BD9C2E /* FirstViewController.swift */,
-				53DE93A01F8EE4C000BD9C2E /* SecondViewController.swift */,
-				53DE93A21F8EE4C100BD9C2E /* Main.storyboard */,
+				53DE93CF1F8EE6A600BD9C2E /* App */,
+				53DE93CE1F8EE69800BD9C2E /* View */,
+				53DE93CD1F8EE69200BD9C2E /* Models */,
+				53DE93CC1F8EE68000BD9C2E /* View Controllers */,
 				53DE93A51F8EE4C100BD9C2E /* Assets.xcassets */,
-				53DE93A71F8EE4C100BD9C2E /* LaunchScreen.storyboard */,
 				53DE93AA1F8EE4C100BD9C2E /* Info.plist */,
 			);
 			path = Lendr;
@@ -126,6 +127,40 @@
 				53DE93C01F8EE4C100BD9C2E /* Info.plist */,
 			);
 			path = LendrUITests;
+			sourceTree = "<group>";
+		};
+		53DE93CC1F8EE68000BD9C2E /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				53DE939E1F8EE4C000BD9C2E /* FirstViewController.swift */,
+				53DE93A01F8EE4C000BD9C2E /* SecondViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		53DE93CD1F8EE69200BD9C2E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		53DE93CE1F8EE69800BD9C2E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				53DE93A71F8EE4C100BD9C2E /* LaunchScreen.storyboard */,
+				53DE93A21F8EE4C100BD9C2E /* Main.storyboard */,
+				5307935A1F8EE9B00056CFBA /* LentItemCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		53DE93CF1F8EE6A600BD9C2E /* App */ = {
+			isa = PBXGroup;
+			children = (
+				53DE939C1F8EE4C000BD9C2E /* AppDelegate.swift */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,6 +300,7 @@
 				53DE93A11F8EE4C000BD9C2E /* SecondViewController.swift in Sources */,
 				53DE939D1F8EE4C000BD9C2E /* AppDelegate.swift in Sources */,
 				53DE939F1F8EE4C000BD9C2E /* FirstViewController.swift in Sources */,
+				5307935B1F8EE9B00056CFBA /* LentItemCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
