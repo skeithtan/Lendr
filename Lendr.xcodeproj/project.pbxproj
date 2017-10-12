@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		03CE50A5F6B7AAEAC8EFC8ED /* Pods_LendrUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6A2E98A0AD083F7DD59AC2E /* Pods_LendrUITests.framework */; };
 		5307935B1F8EE9B00056CFBA /* LentItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5307935A1F8EE9B00056CFBA /* LentItemCell.swift */; };
 		53DE939D1F8EE4C000BD9C2E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DE939C1F8EE4C000BD9C2E /* AppDelegate.swift */; };
 		53DE939F1F8EE4C000BD9C2E /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DE939E1F8EE4C000BD9C2E /* FirstViewController.swift */; };
@@ -16,6 +17,8 @@
 		53DE93A91F8EE4C100BD9C2E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53DE93A71F8EE4C100BD9C2E /* LaunchScreen.storyboard */; };
 		53DE93B41F8EE4C100BD9C2E /* LendrTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DE93B31F8EE4C100BD9C2E /* LendrTests.swift */; };
 		53DE93BF1F8EE4C100BD9C2E /* LendrUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DE93BE1F8EE4C100BD9C2E /* LendrUITests.swift */; };
+		981EF2DFD62DC39664C119EC /* Pods_LendrTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A1282DD194A38B4F8A3D414 /* Pods_LendrTests.framework */; };
+		F0F0224773546FEA760CEF07 /* Pods_Lendr.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8580BBD8F874A7CED58210A4 /* Pods_Lendr.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		073018F9910955BCB567875A /* Pods-LendrUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LendrUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LendrUITests/Pods-LendrUITests.release.xcconfig"; sourceTree = "<group>"; };
 		5307935A1F8EE9B00056CFBA /* LentItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LentItemCell.swift; sourceTree = "<group>"; };
 		53DE93991F8EE4C000BD9C2E /* Lendr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lendr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		53DE939C1F8EE4C000BD9C2E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +55,14 @@
 		53DE93BA1F8EE4C100BD9C2E /* LendrUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LendrUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		53DE93BE1F8EE4C100BD9C2E /* LendrUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LendrUITests.swift; sourceTree = "<group>"; };
 		53DE93C01F8EE4C100BD9C2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5A1282DD194A38B4F8A3D414 /* Pods_LendrTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LendrTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7217AB52E5A55EE31D913BA8 /* Pods-LendrUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LendrUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LendrUITests/Pods-LendrUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		79F16D02D09E95C07F3FD4AB /* Pods-LendrTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LendrTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LendrTests/Pods-LendrTests.release.xcconfig"; sourceTree = "<group>"; };
+		8580BBD8F874A7CED58210A4 /* Pods_Lendr.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Lendr.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		892117F905E4F7E30C3B0638 /* Pods-Lendr.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lendr.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Lendr/Pods-Lendr.debug.xcconfig"; sourceTree = "<group>"; };
+		A55B4861F552F1B50FE75259 /* Pods-LendrTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LendrTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LendrTests/Pods-LendrTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D6A2E98A0AD083F7DD59AC2E /* Pods_LendrUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LendrUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC798517D7F197226E3CF5F9 /* Pods-Lendr.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Lendr.release.xcconfig"; path = "Pods/Target Support Files/Pods-Lendr/Pods-Lendr.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0F0224773546FEA760CEF07 /* Pods_Lendr.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				981EF2DFD62DC39664C119EC /* Pods_LendrTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03CE50A5F6B7AAEAC8EFC8ED /* Pods_LendrUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +100,8 @@
 				53DE93B21F8EE4C100BD9C2E /* LendrTests */,
 				53DE93BD1F8EE4C100BD9C2E /* LendrUITests */,
 				53DE939A1F8EE4C000BD9C2E /* Products */,
+				B70E82B5A04C103B73025813 /* Pods */,
+				D998026B1F9CB08394A32922 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -163,6 +180,29 @@
 			path = App;
 			sourceTree = "<group>";
 		};
+		B70E82B5A04C103B73025813 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				892117F905E4F7E30C3B0638 /* Pods-Lendr.debug.xcconfig */,
+				DC798517D7F197226E3CF5F9 /* Pods-Lendr.release.xcconfig */,
+				A55B4861F552F1B50FE75259 /* Pods-LendrTests.debug.xcconfig */,
+				79F16D02D09E95C07F3FD4AB /* Pods-LendrTests.release.xcconfig */,
+				7217AB52E5A55EE31D913BA8 /* Pods-LendrUITests.debug.xcconfig */,
+				073018F9910955BCB567875A /* Pods-LendrUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D998026B1F9CB08394A32922 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8580BBD8F874A7CED58210A4 /* Pods_Lendr.framework */,
+				5A1282DD194A38B4F8A3D414 /* Pods_LendrTests.framework */,
+				D6A2E98A0AD083F7DD59AC2E /* Pods_LendrUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -170,9 +210,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 53DE93C31F8EE4C100BD9C2E /* Build configuration list for PBXNativeTarget "Lendr" */;
 			buildPhases = (
+				4B8D41701CA04F31BAB428F6 /* [CP] Check Pods Manifest.lock */,
 				53DE93951F8EE4C000BD9C2E /* Sources */,
 				53DE93961F8EE4C000BD9C2E /* Frameworks */,
 				53DE93971F8EE4C000BD9C2E /* Resources */,
+				8A689BA660C89FB71DAAFD25 /* [CP] Embed Pods Frameworks */,
+				17A4B0873968AA7100B82D84 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -187,9 +230,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 53DE93C61F8EE4C100BD9C2E /* Build configuration list for PBXNativeTarget "LendrTests" */;
 			buildPhases = (
+				0D3F9267DEC451D81BF39E16 /* [CP] Check Pods Manifest.lock */,
 				53DE93AB1F8EE4C100BD9C2E /* Sources */,
 				53DE93AC1F8EE4C100BD9C2E /* Frameworks */,
 				53DE93AD1F8EE4C100BD9C2E /* Resources */,
+				ECF453898F38DC4780605906 /* [CP] Embed Pods Frameworks */,
+				238C94D1B6B3B4728D06EDA5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -205,9 +251,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 53DE93C91F8EE4C100BD9C2E /* Build configuration list for PBXNativeTarget "LendrUITests" */;
 			buildPhases = (
+				FB833189D16CB15092C6EA96 /* [CP] Check Pods Manifest.lock */,
 				53DE93B61F8EE4C100BD9C2E /* Sources */,
 				53DE93B71F8EE4C100BD9C2E /* Frameworks */,
 				53DE93B81F8EE4C100BD9C2E /* Resources */,
+				13A5FDD1967A277D29350A23 /* [CP] Embed Pods Frameworks */,
+				A3FD396B42F901650AE2DA79 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -291,6 +340,158 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0D3F9267DEC451D81BF39E16 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LendrTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		13A5FDD1967A277D29350A23 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LendrUITests/Pods-LendrUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		17A4B0873968AA7100B82D84 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Lendr/Pods-Lendr-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		238C94D1B6B3B4728D06EDA5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LendrTests/Pods-LendrTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4B8D41701CA04F31BAB428F6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Lendr-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8A689BA660C89FB71DAAFD25 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Lendr/Pods-Lendr-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Lendr/Pods-Lendr-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A3FD396B42F901650AE2DA79 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LendrUITests/Pods-LendrUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ECF453898F38DC4780605906 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LendrTests/Pods-LendrTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FB833189D16CB15092C6EA96 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LendrUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		53DE93951F8EE4C000BD9C2E /* Sources */ = {
@@ -464,6 +665,7 @@
 		};
 		53DE93C41F8EE4C100BD9C2E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 892117F905E4F7E30C3B0638 /* Pods-Lendr.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -479,6 +681,7 @@
 		};
 		53DE93C51F8EE4C100BD9C2E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DC798517D7F197226E3CF5F9 /* Pods-Lendr.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -494,6 +697,7 @@
 		};
 		53DE93C71F8EE4C100BD9C2E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A55B4861F552F1B50FE75259 /* Pods-LendrTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -511,6 +715,7 @@
 		};
 		53DE93C81F8EE4C100BD9C2E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 79F16D02D09E95C07F3FD4AB /* Pods-LendrTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -528,6 +733,7 @@
 		};
 		53DE93CA1F8EE4C100BD9C2E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7217AB52E5A55EE31D913BA8 /* Pods-LendrUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -544,6 +750,7 @@
 		};
 		53DE93CB1F8EE4C100BD9C2E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 073018F9910955BCB567875A /* Pods-LendrUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
