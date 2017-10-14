@@ -8,10 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		03CE50A5F6B7AAEAC8EFC8ED /* Pods_LendrUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6A2E98A0AD083F7DD59AC2E /* Pods_LendrUITests.framework */; };
-		5307935B1F8EE9B00056CFBA /* LentItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5307935A1F8EE9B00056CFBA /* LentItemCell.swift */; };
+		5306E1831F908359007B27FD /* LoansTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5306E1821F908359007B27FD /* LoansTableVC.swift */; };
+		5307935B1F8EE9B00056CFBA /* LoanCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5307935A1F8EE9B00056CFBA /* LoanCell.swift */; };
+		53344E251F919BB40084C5E4 /* AddLoanFormVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53344E241F919BB40084C5E4 /* AddLoanFormVC.swift */; };
+		534E89B61F8EF77900285A1C /* Loan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534E89B51F8EF77900285A1C /* Loan.swift */; };
+		539160161F92BB0C00B51EBC /* LoanMasterDetailSplitVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539160151F92BB0C00B51EBC /* LoanMasterDetailSplitVC.swift */; };
 		53DE939D1F8EE4C000BD9C2E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DE939C1F8EE4C000BD9C2E /* AppDelegate.swift */; };
-		53DE939F1F8EE4C000BD9C2E /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DE939E1F8EE4C000BD9C2E /* FirstViewController.swift */; };
-		53DE93A11F8EE4C000BD9C2E /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DE93A01F8EE4C000BD9C2E /* SecondViewController.swift */; };
 		53DE93A41F8EE4C100BD9C2E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53DE93A21F8EE4C100BD9C2E /* Main.storyboard */; };
 		53DE93A61F8EE4C100BD9C2E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53DE93A51F8EE4C100BD9C2E /* Assets.xcassets */; };
 		53DE93A91F8EE4C100BD9C2E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53DE93A71F8EE4C100BD9C2E /* LaunchScreen.storyboard */; };
@@ -40,11 +42,13 @@
 
 /* Begin PBXFileReference section */
 		073018F9910955BCB567875A /* Pods-LendrUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LendrUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LendrUITests/Pods-LendrUITests.release.xcconfig"; sourceTree = "<group>"; };
-		5307935A1F8EE9B00056CFBA /* LentItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LentItemCell.swift; sourceTree = "<group>"; };
+		5306E1821F908359007B27FD /* LoansTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoansTableVC.swift; sourceTree = "<group>"; };
+		5307935A1F8EE9B00056CFBA /* LoanCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoanCell.swift; sourceTree = "<group>"; };
+		53344E241F919BB40084C5E4 /* AddLoanFormVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLoanFormVC.swift; sourceTree = "<group>"; };
+		534E89B51F8EF77900285A1C /* Loan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loan.swift; sourceTree = "<group>"; };
+		539160151F92BB0C00B51EBC /* LoanMasterDetailSplitVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoanMasterDetailSplitVC.swift; sourceTree = "<group>"; };
 		53DE93991F8EE4C000BD9C2E /* Lendr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lendr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		53DE939C1F8EE4C000BD9C2E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		53DE939E1F8EE4C000BD9C2E /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		53DE93A01F8EE4C000BD9C2E /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		53DE93A31F8EE4C100BD9C2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		53DE93A51F8EE4C100BD9C2E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		53DE93A81F8EE4C100BD9C2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -149,8 +153,9 @@
 		53DE93CC1F8EE68000BD9C2E /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				53DE939E1F8EE4C000BD9C2E /* FirstViewController.swift */,
-				53DE93A01F8EE4C000BD9C2E /* SecondViewController.swift */,
+				5306E1821F908359007B27FD /* LoansTableVC.swift */,
+				53344E241F919BB40084C5E4 /* AddLoanFormVC.swift */,
+				539160151F92BB0C00B51EBC /* LoanMasterDetailSplitVC.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -158,6 +163,7 @@
 		53DE93CD1F8EE69200BD9C2E /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				534E89B51F8EF77900285A1C /* Loan.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -167,7 +173,7 @@
 			children = (
 				53DE93A71F8EE4C100BD9C2E /* LaunchScreen.storyboard */,
 				53DE93A21F8EE4C100BD9C2E /* Main.storyboard */,
-				5307935A1F8EE9B00056CFBA /* LentItemCell.swift */,
+				5307935A1F8EE9B00056CFBA /* LoanCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -430,13 +436,17 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Lendr/Pods-Lendr-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SearchTextField/SearchTextField.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SearchTextField.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -498,10 +508,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				53DE93A11F8EE4C000BD9C2E /* SecondViewController.swift in Sources */,
 				53DE939D1F8EE4C000BD9C2E /* AppDelegate.swift in Sources */,
-				53DE939F1F8EE4C000BD9C2E /* FirstViewController.swift in Sources */,
-				5307935B1F8EE9B00056CFBA /* LentItemCell.swift in Sources */,
+				53344E251F919BB40084C5E4 /* AddLoanFormVC.swift in Sources */,
+				5306E1831F908359007B27FD /* LoansTableVC.swift in Sources */,
+				534E89B61F8EF77900285A1C /* Loan.swift in Sources */,
+				539160161F92BB0C00B51EBC /* LoanMasterDetailSplitVC.swift in Sources */,
+				5307935B1F8EE9B00056CFBA /* LoanCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

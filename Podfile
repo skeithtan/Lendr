@@ -7,8 +7,9 @@ target 'Lendr' do
 
   # Pods for Lendr
   pod 'RealmSwift'
-
-
+  pod 'IQKeyboardManager'
+  pod "SearchTextField"
+  
   target 'LendrTests' do
     inherit! :search_paths
     # Pods for testing
