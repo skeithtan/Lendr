@@ -71,8 +71,6 @@ class AddLoanFormVC: UITableViewController {
         
         lendingCell.accessoryType = .checkmark
         cashCell.accessoryType = .checkmark
-        
-        
                 
         personNameTextField.userStoppedTypingHandler = {
             self.validateForm()

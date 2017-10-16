@@ -29,6 +29,10 @@ class Loan: Object {
         }
     }
     
+    var readableName: String {
+        return isCash ? "₱\(itemName)" : itemName
+    }
+    
     enum LoanType: Int {
         case lend = 0
         case borrow = 1
@@ -39,7 +43,7 @@ class Loan: Object {
     }
     
     override static func ignoredProperties() -> [String] {
-        return ["type"]
+        return ["type", "readableName"]
     }
     
     func initWith(name: String, dueDate: Date, person: String, isCash: Bool) {

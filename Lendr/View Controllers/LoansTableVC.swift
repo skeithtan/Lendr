@@ -10,18 +10,31 @@ import UIKit
 import RealmSwift
 import LKAlertController
 
-class LoanTableVC: UITableViewController {
+class LoansTableVC: UITableViewController {
     
-    fileprivate var realm: Realm {
-        return try! Realm()
+    fileprivate var realm: Realm = try! Realm()
+    
+    
+    var searchPerson: String? = nil {
+        didSet {
+            let allLoans = realm
+                .objects(Loan.self)
+                .sorted(byKeyPath: "dueDate", ascending: true)
+            
+            if let search = searchPerson {
+                self.loans = allLoans.filter("person CONTAINS %@", search)
+            } else {
+                self.loans = allLoans
+            }
+            
+            tableView.reloadData()
+        }
     }
     
     // All Loans
-    var loans: Results<Loan> {
-        return realm
+    var loans = try! Realm()
             .objects(Loan.self)
             .sorted(byKeyPath: "dueDate", ascending: true)
-    }
     
     // All unreturned
     var unreturnedLoans: [Loan] {
@@ -69,6 +82,7 @@ class LoanTableVC: UITableViewController {
         
     }
     
+    @IBOutlet weak var searchBar: UISearchBar!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -78,12 +92,13 @@ class LoanTableVC: UITableViewController {
         
         //Only on the first page
         self.navigationController?.navigationItem.largeTitleDisplayMode = .never
-        
-        self.tableView.tableFooterView = UIView(frame: CGRect.zero)
+      
+        definesPresentationContext = true
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        self.searchBar.enablesReturnKeyAutomatically = false
         self.tableView.reloadData()
     }
     
@@ -103,7 +118,7 @@ class LoanTableVC: UITableViewController {
             let navController = segue.destination as! UINavigationController
             let modifyLoanForm = navController.viewControllers[0] as! ModifyLoanFormVC
             let indexPath = sender as! IndexPath
-            let loan = sections[indexPath.section].content[indexPath.row]
+            let loan = sections[indexPath.section].rows[indexPath.row]
             modifyLoanForm.loan = loan
             modifyLoanForm.onModifyLoan = self.onModifyLoan
         default:
@@ -111,12 +126,12 @@ class LoanTableVC: UITableViewController {
         }
     }
     
-    
     func onAddLoan(loan: Loan) {
         try! realm.write {
             self.realm.add(loan)
         }
         
+        Notifications.scheduleNotification(forLoan: loan)
         self.tableView.reloadData()
     }
     
@@ -159,36 +174,37 @@ class LoanTableVC: UITableViewController {
                     realm.delete(loan)
                 }
                 
+                Notifications.removeNotification(forLoan: loan)
+                
                 completion(true)
                 self.tableView.deleteRows(at: [indexPath], with: .automatic)
             }
             .show()
     }
-    
-    
+  
     //MARK: - UITableViewDataSource
     fileprivate struct Section {
-        var name: String
-        var content: [Loan]
+        var title: String
+        var rows: [Loan]
     }
     
     fileprivate var sections: [Section] {
         var arr = [Section]()
         
         if !returnToday.isEmpty {
-            arr.append(Section(name: "Return Today", content: returnToday))
+            arr.append(Section(title: "Return Today", rows: returnToday))
         }
         
         if !overdueLoans.isEmpty {
-            arr.append(Section(name: "Overdue", content: overdueLoans))
+            arr.append(Section(title: "Overdue", rows: overdueLoans))
         }
         
         if !onTimeLoans.isEmpty {
-            arr.append(Section(name: "Unreturned", content: onTimeLoans))
+            arr.append(Section(title: "Unreturned", rows: onTimeLoans))
         }
         
         if !returnedLoans.isEmpty {
-            arr.append(Section(name: "Returned", content: returnedLoans))
+            arr.append(Section(title: "Returned", rows: returnedLoans))
         }
         
         return arr
@@ -200,12 +216,12 @@ class LoanTableVC: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return sections[section].name
+        return sections[section].title
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.tableView.dequeueReusableCell(withIdentifier: "loanRowCell") as! LoanCell
-        let array = sections[indexPath.section].content
+        let array = sections[indexPath.section].rows
         cell.fillWith(loan: array[indexPath.row])
         
         return cell
@@ -213,7 +229,7 @@ class LoanTableVC: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return sections[section].content.count
+        return sections[section].rows.count
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -221,7 +237,7 @@ class LoanTableVC: UITableViewController {
         tableView.deselectRow(at: indexPath, animated: true)
     }
     override func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        let loan = self.sections[indexPath.section].content[indexPath.row]
+        let loan = self.sections[indexPath.section].rows[indexPath.row]
         
         if loan.isReturned {
             let markAsUnreturned = UIContextualAction(style: .normal, title: "Mark as Unreturned") { _, _, completion in
@@ -242,7 +258,7 @@ class LoanTableVC: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        let loan = self.sections[indexPath.section].content[indexPath.row]
+        let loan = self.sections[indexPath.section].rows[indexPath.row]
         
         let delete = UIContextualAction(style: .destructive, title: "Delete") { _, _, completion in
             self.onDeleteLoan(loan: loan, at: indexPath, completion: completion)
@@ -254,3 +270,12 @@ class LoanTableVC: UITableViewController {
     
 }
 
+extension LoansTableVC: UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        self.searchPerson = searchText.isEmpty ? nil : searchText
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
+    }
+}

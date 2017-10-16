@@ -25,7 +25,7 @@ class LoanCell: UITableViewCell {
     
     
     func fillWith(loan: Loan) {
-        loanItemNameLabel?.text = loan.isCash ? "₱\(loan.itemName)" : loan.itemName
+        loanItemNameLabel?.text = loan.readableName
         
         switch loan.type {
         case .lend:
