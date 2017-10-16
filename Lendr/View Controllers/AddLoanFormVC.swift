@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Contacts
 import SearchTextField
 
 class AddLoanFormVC: UITableViewController {
@@ -19,7 +18,7 @@ class AddLoanFormVC: UITableViewController {
     @IBOutlet weak var itemCell: UITableViewCell!
     
     @IBOutlet weak var itemNameLabel: UILabel!
-    @IBOutlet weak var itemValueTextField: SearchTextField!
+    @IBOutlet weak var itemNameTextField: SearchTextField!
     
     @IBOutlet weak var personNameLabel: UILabel!
     @IBOutlet weak var personNameTextField: SearchTextField!
@@ -33,22 +32,36 @@ class AddLoanFormVC: UITableViewController {
     fileprivate var isLend = true {
         didSet {
             self.personNameLabel.text = isLend ? "Lending to" : "Borrowing from"
+            
+            if isLend {
+                lendingCell.accessoryType = .checkmark
+                borrowingCell.accessoryType = .none
+            } else {
+                lendingCell.accessoryType = .none
+                borrowingCell.accessoryType = .checkmark
+            }
         }
     }
     fileprivate var isCash = true {
         didSet {
-            self.itemValueTextField.resignFirstResponder()
+            self.itemNameTextField.resignFirstResponder()
             
             if isCash {
+                cashCell.accessoryType = .checkmark
+                itemCell.accessoryType = .none
+                
                 itemNameLabel.text = "Amount"
-                itemValueTextField.text = ""
-                itemValueTextField.placeholder = "Amount"
-                itemValueTextField.keyboardType = .numberPad
+                itemNameTextField.text = ""
+                itemNameTextField.placeholder = "Amount"
+                itemNameTextField.keyboardType = .numberPad
             } else {
+                cashCell.accessoryType = .none
+                itemCell.accessoryType = .checkmark
+                
                 itemNameLabel.text = "Item name"
-                itemValueTextField.text = ""
-                itemValueTextField.placeholder = "Item name"
-                itemValueTextField.keyboardType = .default
+                itemNameTextField.text = ""
+                itemNameTextField.placeholder = "Item name"
+                itemNameTextField.keyboardType = .default
             }
         }
     }
@@ -59,9 +72,7 @@ class AddLoanFormVC: UITableViewController {
         lendingCell.accessoryType = .checkmark
         cashCell.accessoryType = .checkmark
         
-        if CNContactStore.authorizationStatus(for: .contacts) == .notDetermined {
-            CNContactStore().requestAccess(for: .contacts) {_, _ in }
-        }
+        
                 
         personNameTextField.userStoppedTypingHandler = {
             self.validateForm()
@@ -72,7 +83,7 @@ class AddLoanFormVC: UITableViewController {
             
             self.personNameTextField.showLoadingIndicator()
             
-            let searchItems = self.autocompleteContacts(forString: text)
+            let searchItems = UserContacts.autocompleteContacts(forString: text)
             
             self.personNameTextField.filterItems(searchItems.map { contact in
                 SearchTextFieldItem(title: contact.0, subtitle: contact.1)
@@ -82,8 +93,8 @@ class AddLoanFormVC: UITableViewController {
             
         }
         
-        itemValueTextField.userStoppedTypingHandler = {
-            guard let _ = self.itemValueTextField.text else {
+        itemNameTextField.userStoppedTypingHandler = {
+            guard let _ = self.itemNameTextField.text else {
                 return
             }
             
@@ -94,7 +105,7 @@ class AddLoanFormVC: UITableViewController {
     }
     
     func validateForm() {
-        let itemFilled = !(itemValueTextField.text?.isEmpty ?? true)
+        let itemFilled = !(itemNameTextField.text?.isEmpty ?? true)
         let personFilled = !(personNameTextField.text?.isEmpty ?? true)
         
         self.saveButton.isEnabled = itemFilled && personFilled
@@ -108,7 +119,7 @@ class AddLoanFormVC: UITableViewController {
         self.navigationController?.dismiss(animated: true, completion: nil)
         
         let loan = Loan()
-        loan.itemName = itemValueTextField.text ?? ""
+        loan.itemName = itemNameTextField.text ?? ""
         loan.person = personNameTextField.text ?? ""
         loan.dueDate = returnDatePicker.date
         loan.isCash = self.isCash
@@ -118,27 +129,7 @@ class AddLoanFormVC: UITableViewController {
         //TODO: Return data
     }
     
-    fileprivate func autocompleteContacts(forString str: String) -> [(String, String?)] {
-        guard CNContactStore.authorizationStatus(for: .contacts) == .authorized else {
-            return []
-        }
-        
-        let store = CNContactStore()
-        
-        let predicate = CNContact.predicateForContacts(matchingName: str)
-        let keysToFetch = [CNContactFormatter.descriptorForRequiredKeys(for: .fullName)]
-        
-        guard let contacts = try? store.unifiedContacts(matching: predicate, keysToFetch: keysToFetch) else {
-            return []
-        }
-        
-        return contacts.map { contact in
-            let nickname = contact.nickname.isEmpty ? nil : contact.nickname
-            let name = contact.givenName + " " + contact.familyName
-            
-            return (name, nickname)
-        }
-    }
+    
     
     //MARK: - UITableViewDelegate
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -146,29 +137,13 @@ class AddLoanFormVC: UITableViewController {
         case 0:
             // Lending vs borrowing
             isLend = indexPath.row == 0
-            
-            if indexPath.row == 0 {
-                lendingCell.accessoryType = .checkmark
-                borrowingCell.accessoryType = .none
-            } else {
-                lendingCell.accessoryType = .none
-                borrowingCell.accessoryType = .checkmark
-            }
         case 1:
             // Cash vs Item
             
             isCash = indexPath.row == 0
-            
-            if indexPath.row == 0 {
-                cashCell.accessoryType = .checkmark
-                itemCell.accessoryType = .none
-            } else {
-                cashCell.accessoryType = .none
-                itemCell.accessoryType = .checkmark
-            }
         case 2:
             if indexPath.row == 0 {
-                itemValueTextField.becomeFirstResponder()
+                itemNameTextField.becomeFirstResponder()
             } else {
                 personNameTextField.becomeFirstResponder()
             }

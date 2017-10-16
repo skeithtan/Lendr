@@ -8,13 +8,20 @@
 
 import UIKit
 import RealmSwift
+import LKAlertController
 
 class LoanTableVC: UITableViewController {
     
+    fileprivate var realm: Realm {
+        return try! Realm()
+    }
+    
     // All Loans
-    var loans = try! Realm()
-        .objects(Loan.self)
-        .sorted(byKeyPath: "dueDate", ascending: true)
+    var loans: Results<Loan> {
+        return realm
+            .objects(Loan.self)
+            .sorted(byKeyPath: "dueDate", ascending: true)
+    }
     
     // All unreturned
     var unreturnedLoans: [Loan] {
@@ -56,8 +63,8 @@ class LoanTableVC: UITableViewController {
     var onTimeLoans : [Loan] {
         return unreturnedLoans.filter { loan in
             loan.dueDate > Date() // Date now
-        }.sorted {
-            $0.dueDate < $1.dueDate
+            }.sorted {
+                $0.dueDate < $1.dueDate
         }
         
     }
@@ -92,6 +99,13 @@ class LoanTableVC: UITableViewController {
             let navController = segue.destination as! UINavigationController
             let addLoanForm = navController.viewControllers[0] as! AddLoanFormVC
             addLoanForm.onAddLoan = self.onAddLoan
+        case "ViewLoanSegue":
+            let navController = segue.destination as! UINavigationController
+            let modifyLoanForm = navController.viewControllers[0] as! ModifyLoanFormVC
+            let indexPath = sender as! IndexPath
+            let loan = sections[indexPath.section].content[indexPath.row]
+            modifyLoanForm.loan = loan
+            modifyLoanForm.onModifyLoan = self.onModifyLoan
         default:
             return
         }
@@ -99,13 +113,56 @@ class LoanTableVC: UITableViewController {
     
     
     func onAddLoan(loan: Loan) {
-        let realm = try! Realm()
-        
         try! realm.write {
-            realm.add(loan)
+            self.realm.add(loan)
         }
         
         self.tableView.reloadData()
+    }
+    
+    func onModifyLoan(loan: Loan) {
+        try! realm.write {
+            self.realm.add(loan, update: true)
+        }
+        
+        tableView.reloadData()
+    }
+    
+    func onMarkAsReturned(loan: Loan, completion: (Bool) -> Void) {
+        try! realm.write {
+            loan.isReturned = true
+            loan.returnDate = Date() // Current Date
+        }
+        
+        completion(true)
+        tableView.reloadData()
+    }
+    
+    func onMarkAsUnreturned(loan: Loan, completion: (Bool) -> Void) {
+        try! realm.write {
+            loan.isReturned = false
+            loan.returnDate = nil
+        }
+        
+        completion(true)
+        tableView.reloadData()
+    }
+    
+    func onDeleteLoan(loan: Loan, at indexPath: IndexPath, completion: @escaping (Bool) -> Void) {
+        Alert(title: "Are you sure you want to delete this item?", message: "This cannot be undone")
+            .addAction("Cancel", style: .cancel) { _ in
+                completion(false)
+            }
+            .addAction("Delete", style: .destructive) { _ in
+                let realm = try! Realm()
+                try! realm.write {
+                    realm.delete(loan)
+                }
+                
+                completion(true)
+                self.tableView.deleteRows(at: [indexPath], with: .automatic)
+            }
+            .show()
     }
     
     
@@ -152,11 +209,46 @@ class LoanTableVC: UITableViewController {
         cell.fillWith(loan: array[indexPath.row])
         
         return cell
-    
+        
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return sections[section].content.count
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "ViewLoanSegue", sender: indexPath)
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    override func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let loan = self.sections[indexPath.section].content[indexPath.row]
+        
+        if loan.isReturned {
+            let markAsUnreturned = UIContextualAction(style: .normal, title: "Mark as Unreturned") { _, _, completion in
+                self.onMarkAsUnreturned(loan: loan, completion: completion)
+            }
+            
+            return UISwipeActionsConfiguration(actions: [markAsUnreturned])
+        } else {
+            
+            let markAsReturned = UIContextualAction(style: .normal, title: "Mark as Returned") { _, _, completion in
+                self.onMarkAsReturned(loan: loan, completion: completion)
+            }
+            
+            markAsReturned.backgroundColor = UIColor(red:0.00, green:0.48, blue:1.00, alpha:1.0)
+            
+            return UISwipeActionsConfiguration(actions: [markAsReturned])
+        }
+    }
+    
+    override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let loan = self.sections[indexPath.section].content[indexPath.row]
+        
+        let delete = UIContextualAction(style: .destructive, title: "Delete") { _, _, completion in
+            self.onDeleteLoan(loan: loan, at: indexPath, completion: completion)
+        }
+        
+        return UISwipeActionsConfiguration(actions: [delete])
     }
     
     

@@ -10,9 +10,10 @@
 		03CE50A5F6B7AAEAC8EFC8ED /* Pods_LendrUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6A2E98A0AD083F7DD59AC2E /* Pods_LendrUITests.framework */; };
 		5306E1831F908359007B27FD /* LoansTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5306E1821F908359007B27FD /* LoansTableVC.swift */; };
 		5307935B1F8EE9B00056CFBA /* LoanCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5307935A1F8EE9B00056CFBA /* LoanCell.swift */; };
+		533175981F92BE6C003A937C /* UserContacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533175971F92BE6C003A937C /* UserContacts.swift */; };
 		53344E251F919BB40084C5E4 /* AddLoanFormVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53344E241F919BB40084C5E4 /* AddLoanFormVC.swift */; };
 		534E89B61F8EF77900285A1C /* Loan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534E89B51F8EF77900285A1C /* Loan.swift */; };
-		539160161F92BB0C00B51EBC /* LoanMasterDetailSplitVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539160151F92BB0C00B51EBC /* LoanMasterDetailSplitVC.swift */; };
+		539160181F92BD3D00B51EBC /* ModifyLoanFormVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539160171F92BD3D00B51EBC /* ModifyLoanFormVC.swift */; };
 		53DE939D1F8EE4C000BD9C2E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DE939C1F8EE4C000BD9C2E /* AppDelegate.swift */; };
 		53DE93A41F8EE4C100BD9C2E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53DE93A21F8EE4C100BD9C2E /* Main.storyboard */; };
 		53DE93A61F8EE4C100BD9C2E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53DE93A51F8EE4C100BD9C2E /* Assets.xcassets */; };
@@ -44,9 +45,10 @@
 		073018F9910955BCB567875A /* Pods-LendrUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LendrUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LendrUITests/Pods-LendrUITests.release.xcconfig"; sourceTree = "<group>"; };
 		5306E1821F908359007B27FD /* LoansTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoansTableVC.swift; sourceTree = "<group>"; };
 		5307935A1F8EE9B00056CFBA /* LoanCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoanCell.swift; sourceTree = "<group>"; };
+		533175971F92BE6C003A937C /* UserContacts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserContacts.swift; sourceTree = "<group>"; };
 		53344E241F919BB40084C5E4 /* AddLoanFormVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLoanFormVC.swift; sourceTree = "<group>"; };
 		534E89B51F8EF77900285A1C /* Loan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loan.swift; sourceTree = "<group>"; };
-		539160151F92BB0C00B51EBC /* LoanMasterDetailSplitVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoanMasterDetailSplitVC.swift; sourceTree = "<group>"; };
+		539160171F92BD3D00B51EBC /* ModifyLoanFormVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyLoanFormVC.swift; sourceTree = "<group>"; };
 		53DE93991F8EE4C000BD9C2E /* Lendr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lendr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		53DE939C1F8EE4C000BD9C2E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		53DE93A31F8EE4C100BD9C2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -155,7 +157,7 @@
 			children = (
 				5306E1821F908359007B27FD /* LoansTableVC.swift */,
 				53344E241F919BB40084C5E4 /* AddLoanFormVC.swift */,
-				539160151F92BB0C00B51EBC /* LoanMasterDetailSplitVC.swift */,
+				539160171F92BD3D00B51EBC /* ModifyLoanFormVC.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -164,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				534E89B51F8EF77900285A1C /* Loan.swift */,
+				533175971F92BE6C003A937C /* UserContacts.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -437,6 +440,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Lendr/Pods-Lendr-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
+				"${BUILT_PRODUCTS_DIR}/LKAlertController/LKAlertController.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SearchTextField/SearchTextField.framework",
@@ -444,6 +448,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LKAlertController.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SearchTextField.framework",
@@ -508,12 +513,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				533175981F92BE6C003A937C /* UserContacts.swift in Sources */,
 				53DE939D1F8EE4C000BD9C2E /* AppDelegate.swift in Sources */,
 				53344E251F919BB40084C5E4 /* AddLoanFormVC.swift in Sources */,
 				5306E1831F908359007B27FD /* LoansTableVC.swift in Sources */,
 				534E89B61F8EF77900285A1C /* Loan.swift in Sources */,
-				539160161F92BB0C00B51EBC /* LoanMasterDetailSplitVC.swift in Sources */,
 				5307935B1F8EE9B00056CFBA /* LoanCell.swift in Sources */,
+				539160181F92BD3D00B51EBC /* ModifyLoanFormVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -687,7 +693,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = axis.Lendr;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -703,7 +709,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = axis.Lendr;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

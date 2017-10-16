@@ -10,12 +10,14 @@ import RealmSwift
 
 
 class Loan: Object {
+    @objc dynamic var id: String = UUID().uuidString
     @objc dynamic var itemName: String = ""
     @objc dynamic var dueDate: Date = Date()
     @objc dynamic var person: String = ""
     @objc dynamic var isReturned: Bool = false
     @objc dynamic var isCash: Bool = false
     @objc dynamic var typeInt: Int = LoanType.lend.rawValue
+    @objc dynamic var returnDate: Date? = nil
     
     var type: LoanType {
         get {
@@ -30,6 +32,10 @@ class Loan: Object {
     enum LoanType: Int {
         case lend = 0
         case borrow = 1
+    }
+    
+    override static func primaryKey() -> String? {
+        return "id"
     }
     
     override static func ignoredProperties() -> [String] {

@@ -25,27 +25,43 @@ class LoanCell: UITableViewCell {
     
     
     func fillWith(loan: Loan) {
-        
-        print(loanTypeLabel)
-        
         loanItemNameLabel?.text = loan.isCash ? "₱\(loan.itemName)" : loan.itemName
         
         switch loan.type {
         case .lend:
-            loanTypeLabel.text = "Lending"
+            loanTypeLabel.text = loan.isReturned ? "Lent": "Lending"
             personNameLabel.text = "to \(loan.person)"
             colorStripView.backgroundColor = colorScheme["Lending"]
         case .borrow:
-            loanTypeLabel.text = "Borrowing"
+            loanTypeLabel.text = loan.isReturned ? "Borrowed" : "Borrowing"
             personNameLabel.text = "from \(loan.person)"
             colorStripView.backgroundColor = colorScheme["Borrowing"]
         }
         
         
         let calendar = Calendar.current
+        let today = calendar.startOfDay(for: Date())
+
+        timeLeftLabel.textColor = .darkText
+
+        guard !loan.isReturned else {
+            let returnDate = loan.returnDate!
+            let components = calendar.dateComponents([.day], from: returnDate, to: today)
+            let daysAgo = components.day ?? 0
+            
+            switch daysAgo {
+            case 0:
+                timeLeftLabel.text = "Today"
+            case 1:
+                timeLeftLabel.text = "Yesterday"
+            default:
+                timeLeftLabel.text = "\(daysAgo) days ago"
+            }
+            
+            return
+        }
         
         let dateDue = calendar.startOfDay(for: loan.dueDate)
-        let today = calendar.startOfDay(for: Date())
         
         let components = calendar.dateComponents([.day], from: today, to: dateDue)
         let daysLeft = components.day ?? 0
@@ -64,10 +80,6 @@ class LoanCell: UITableViewCell {
             colorStripView.backgroundColor = colorScheme["Overdue"]
             timeLeftLabel.textColor = colorScheme["Overdue"]
         }
-        
-        
-        //TODO: Time Left
-        
     }
     
 }
